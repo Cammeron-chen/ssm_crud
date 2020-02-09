@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--驼峰命名规则-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+
+    <!--配置别名-->
+    <typeAliases>
+        <!--第二种配置别名,别名就是类名，第一个字母小写，比如User->user-->
+        <package name="com.crud.model"/>
+    </typeAliases>
+
+     <!--插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="reasonable" value="true" />
+        </plugin>
+    </plugins>
+    
+    
+
+
+</configuration>
